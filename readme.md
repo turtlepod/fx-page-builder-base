@@ -7,10 +7,11 @@ This plugin is created as example in [Page Builder Tutorial Series](https://shel
 
 ## (Intro) Create Your Own WordPress Page Builder Plugin From Scratch
 
-[Read Tutorial](http://shellcreeper.com/wp-page-builder-plugin-from-scratch/)
+[Read Tutorial](https://shellcreeper.com/wp-page-builder-plugin-from-scratch/)
 
 ## PART #1: Create Page Builder Page Template
-[COMING SOON]
+
+[Read Tutorial](https://shellcreeper.com/wp-page-builder-from-scratch-1-create-page-builder-page-template/)
 
 ## PART #2: Features, Design, and UI
 [COMING SOON]
