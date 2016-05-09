@@ -1,8 +1,9 @@
-# Custom WP Page Builder
+# Custom WP Page Builder Tutorial
 
-This plugin is created as example for [Page Builder Tutorial Series](https://shellcreeper.com/series/page-builder-tuts/) in my blog. 
+This plugin is created as example in [Page Builder Tutorial Series](https://shellcreeper.com/series/page-builder-tuts/) in my blog. 
 
- :turtle: Follow my twitter for updates: [@turtlepod](https://twitter.com/turtlepod).</br>  :coffee: Useful?[Buy me coffee](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TT23LVNKA3AU2).
+:turtle: Follow my twitter for updates: [@turtlepod](https://twitter.com/turtlepod).</br>
+:coffee: Useful? [Buy me coffee](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TT23LVNKA3AU2).
 
 ## (Intro) Create Your Own WordPress Page Builder Plugin From Scratch
 
