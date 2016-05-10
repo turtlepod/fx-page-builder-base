@@ -1,0 +1,105 @@
+/**
+ * Page Builder Admin CSS
+**/
+#postdivrich{
+	display:none;
+}
+#fx-page-builder{
+	margin: 20px 0;
+}
+/* Templates */
+.fxpb-templates{
+	display: none;
+}
+/* Rows */
+.fxpb-rows{
+	margin-bottom: 30px;
+}
+.fxpb-rows-message{
+	border: 2px dashed #ccc;
+	padding: 10px 20px;
+	text-align: center;
+}
+/* Buttons */
+.fxpb-actions{
+	margin-bottom: 30px;
+}
+/* Row */
+.fxpb-row{
+	font-size: 16px;
+	border: 1px solid #ccc;
+	background: #fff;
+	margin-bottom: 20px;
+}
+	/* Sortable Placeholder */
+	.fxpb-row.ui-sortable-placeholder{
+		border: 1px dashed #ccc;
+		visibility: visible !important;
+		background: transparent;
+	}
+.fxpb-row-title{
+}
+.fxpb-row-title:after{
+	content:".";display:block;height:0;clear:both;visibility:hidden;
+}
+.fxpb-handle{
+	padding: 10px;
+	border-right: 1px solid #ccc;
+	cursor: grab;
+}
+	.fxpb-handle:hover{
+	}
+.fxpb-row-title-text{
+	padding: 10px;
+	display: inline-block;
+}
+.fxpb-remove{
+	padding: 10px;
+	border-left: 1px solid #ccc;
+	float: right;
+	cursor: pointer;
+}
+.fxpb-remove:hover{
+	background: red;
+	color: #fff;
+}
+.fxpb-row-fields{
+	border-top: 1px solid #ccc;
+	padding: 10px;
+}
+.fxpb-row-fields:after{
+	content:".";display:block;height:0;clear:both;visibility:hidden;
+}
+.fxpb-row-fields textarea{
+	width: 100%;
+	height: 100px;
+}
+/* 1 column template */
+.fxpb-col-1{
+}
+/* 2 columns template */
+.fxpb-col-2{
+}
+.fxpb-col-2 .fxpb-col-2-left{
+	width: 49%;
+	float: left;
+}
+.fxpb-col-2 .fxpb-col-2-right{
+	width: 49%;
+	float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

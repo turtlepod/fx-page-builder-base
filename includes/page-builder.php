@@ -41,8 +41,57 @@ function fx_pbbase_editor_callback( $post ){
 	}
 ?>
 	<div id="fx-page-builder">
-		<h1>Page Builder Placeholder.</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a tortor quam. Vestibulum aliquet, diam eget dignissim vehicula, sapien sapien tempor velit, a ultrices tellus turpis nec nunc. Duis porta dapibus ligula vel semper.</p>
+
+		<div class="fxpb-rows">
+			<p class="fxpb-rows-message">This is where we manage rows.</p>
+		</div><!-- .fxpb-rows -->
+
+		<div class="fxpb-actions">
+			<a href="#" class="fxpb-add-row button-primary button-large" data-template="col-1">Add 1 Column</a>
+			<a href="#" class="fxpb-add-row button-primary button-large" data-template="col-2">Add 2 Columns</a>
+		</div><!-- .fxpb-actions -->
+
+		<div class="fxpb-templates">
+
+			<?php /* == This is the 1 column row template == */ ?>
+			<div class="fxpb-row fxpb-col-1">
+
+				<div class="fxpb-row-title">
+					<span class="fxpb-handle dashicons dashicons-sort"></span>
+					<span class="fxpb-row-title-text">1 Column</span>
+					<span class="fxpb-remove dashicons dashicons-trash"></span>
+				</div><!-- .fxpb-row-title -->
+
+				<div class="fxpb-row-fields">
+					<textarea class="fxpb-row-input" name="" data-field="content" placeholder="Add HTML here..."></textarea>
+					<input class="fxpb-row-input" type="hidden" name="" data-field="type" value="text">
+				</div><!-- .fxpb-row-fields -->
+
+			</div><!-- .fxpb-row.fxpb-col-1 -->
+
+			<?php /* == This is the 2 columns row template == */ ?>
+			<div class="fxpb-row fxpb-col-2">
+
+				<div class="fxpb-row-title">
+					<span class="fxpb-handle dashicons dashicons-sort"></span>
+					<span class="fxpb-row-title-text">2 Columns</span>
+					<span class="fxpb-remove dashicons dashicons-trash"></span>
+				</div><!-- .fxpb-row-title -->
+
+				<div class="fxpb-row-fields">
+					<div class="fxpb-col-2-left">
+						<textarea class="fxpb-row-input" name="" data-field="content-1" placeholder="1st column content here..."></textarea>
+					</div><!-- .fxpb-col-2-left -->
+					<div class="fxpb-col-2-right">
+						<textarea class="fxpb-row-input" name="" data-field="content-2" placeholder="2nd column content here..."></textarea>
+					</div><!-- .fxpb-col-2-right -->
+					<input class="fxpb-row-input" type="hidden" name="" data-field="type" value="text">
+				</div><!-- .fxpb-row-fields -->
+
+			</div><!-- .fxpb-row.fxpb-col-2 -->
+
+		</div><!-- .fxpb-templates -->
+
 	</div><!-- #fx-page-builder -->
 <?php
 }
@@ -65,6 +114,10 @@ function fx_pbbase_admin_scripts( $hook_suffix ){
 
 		/* Load Editor/Page Builder Toggle Script */
 		wp_enqueue_script( 'fx-pbbase-admin-editor-toggle', FX_PBBASE_URI . 'assets/admin-editor-toggle.js', array( 'jquery' ), FX_PBBASE_VERSION );
+
+		/* Enqueue CSS & JS For Page Builder */
+		wp_enqueue_style( 'fx-pbbase-admin', FX_PBBASE_URI. 'assets/admin-page-builder.css', array(), FX_PBBASE_VERSION );
+		wp_enqueue_script( 'fx-pbbase-admin', FX_PBBASE_URI. 'assets/admin-page-builder.js', array( 'jquery', 'jquery-ui-sortable' ), FX_PBBASE_VERSION, true );
 	}
 }
 
