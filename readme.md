@@ -14,13 +14,17 @@ This plugin is created as example in [Page Builder Tutorial Series](https://shel
 [Read Tutorial](https://shellcreeper.com/wp-page-builder-from-scratch-1-create-page-builder-page-template/)
 
 ## PART #2: Features, Design, and UI
-[COMING SOON]
+
+[Read Tutorial](https://shellcreeper.com/wp-page-builder-from-scratch-2-features-design-and-ui/)
 
 ## PART #3: Data Structure and Saving Page Builder Data
+
 [COMING SOON]
 
 ## PART #4: Front-End Output, Theme Dependency, Save Data to Content
+
 [COMING SOON]
 
 peace,</br>
 David.
+
