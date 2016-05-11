@@ -32,17 +32,13 @@ define( 'FX_PBBASE_URI', trailingslashit( plugin_dir_url( __FILE__ ) ) );
 /* Includes
 ------------------------------------------ */
 
+/* Functions */
+require_once( FX_PBBASE_PATH . 'includes/functions.php' );
+
 /* Page Builder */
 if( is_admin() ){
 	require_once( FX_PBBASE_PATH . 'includes/page-builder.php' );
 }
-
-
-
-
-
-
-
 
 
 
