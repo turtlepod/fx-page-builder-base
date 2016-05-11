@@ -2,7 +2,7 @@
 
 This plugin is created as example in [Page Builder Tutorial Series](https://shellcreeper.com/series/page-builder-tuts/) in my blog. 
 
-:turtle: Follow my twitter for updates: [@turtlepod](https://twitter.com/turtlepod).</br>
+:turtle: Follow my twitter for updates: [@turtlepod](https://twitter.com/turtlepod).<br/>
 :coffee: Useful? [Buy me coffee](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TT23LVNKA3AU2).
 
 ## (Intro) Create Your Own WordPress Page Builder Plugin From Scratch
@@ -19,12 +19,12 @@ This plugin is created as example in [Page Builder Tutorial Series](https://shel
 
 ## PART #3: Data Structure and Saving Page Builder Data
 
-[COMING SOON]
+[Read Tutorial](https://shellcreeper.com/wp-page-builder-from-scratch-3-data-structure-and-saving-page-builder-data/)
 
 ## PART #4: Front-End Output, Theme Dependency, Save Data to Content
 
 [COMING SOON]
 
-peace,</br>
+peace,<br/>
 David.
 
