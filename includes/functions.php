@@ -54,3 +54,26 @@ function fxpb_sanitize( $input ){
 }
 
 
+/**
+ * Enable Default Content Filter
+ * @since 1.0.0
+ */
+function fxpb_default_content_filter( $content ){
+	if( $content ){
+		global $wp_embed;
+		$content = $wp_embed->run_shortcode( $content );
+		$content = $wp_embed->autoembed( $content );
+		$content = wptexturize( $content );
+		$content = convert_smilies( $content );
+		$content = convert_chars( $content );
+		$content = wptexturize( $content );
+		$content = do_shortcode( $content );
+		$content = shortcode_unautop( $content );
+		if( function_exists('wp_make_content_images_responsive') ) { /* WP 4.4+ */
+			$content = wp_make_content_images_responsive( $content );
+		}
+		$content = wpautop( $content );
+	}
+	return $content;
+}
+

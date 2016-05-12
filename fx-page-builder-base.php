@@ -40,6 +40,6 @@ if( is_admin() ){
 	require_once( FX_PBBASE_PATH . 'includes/page-builder.php' );
 }
 
-
-
+/* Functions */
+require_once( FX_PBBASE_PATH . 'includes/front-end.php' );
 

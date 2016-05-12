@@ -150,6 +150,68 @@ function fx_pbbase_save_post( $post_id, $post ){
 	elseif ( empty( $submitted_data ) && $saved_data ){
 		delete_post_meta( $post_id, 'fxpb' );
 	}
+
+	/* == Get Selected Page Template == */
+	$page_template = isset( $request['page_template'] ) ? esc_attr( $request['page_template'] ) : null;
+
+	/* == Page Builder Template Selected, Save to Post Content == */
+	if( 'templates/page-builder.php' == $page_template ){
+
+		/* Page builder content without row/column wrapper */
+		$pb_content = fxpb_format_post_content_data( $submitted_data );
+
+		/* Post Data To Save */
+		$this_post = array(
+			'ID'           => $post_id,
+			'post_content' => sanitize_post_field( 'post_content', $pb_content, $post_id, 'db' ),
+		);
+
+		/**
+		 * Prevent infinite loop.
+		 * @link https://developer.wordpress.org/reference/functions/wp_update_post/
+		 */
+		remove_action( 'save_post', 'fx_pbbase_save_post' );
+		wp_update_post( $this_post );
+		add_action( 'save_post', 'fx_pbbase_save_post' );
+	}
+
+	/* == Always delete page builder data if page template not selected == */
+	else{
+		delete_post_meta( $post_id, 'fxpb' );
+	}
+}
+
+
+/**
+ * Format Page Builder Content Without Wrapper Div.
+ * This is added to post content.
+ * @since 1.0.0
+**/
+function fxpb_format_post_content_data( $row_datas ){
+
+	/* return if no rows data */
+	if( !$row_datas ){
+		return '';
+	}
+
+	/* Output */
+	$content = '';
+
+	/* Loop for each rows */
+	foreach( $row_datas as $order => $row_data ){
+		$order = intval( $order );
+
+		/* === Row with 1 column === */
+		if( 'col-1' == $row_data['type'] ){
+			$content .= $row_data['content'] . "\r\n\r\n";
+		}
+		/* === Row with 2 columns === */
+		elseif( 'col-2' == $row_data['type'] ){
+			$content .= $row_data['content-1'] . "\r\n\r\n";
+			$content .= $row_data['content-2'] . "\r\n\r\n";
+		}
+	}
+	return $content;
 }
 
 
