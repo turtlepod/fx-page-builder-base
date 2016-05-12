@@ -23,7 +23,7 @@ This plugin is created as example in [Page Builder Tutorial Series](https://shel
 
 ## PART #4: Front-End Output, Theme Dependency, Save Data to Content
 
-[COMING SOON]
+[Read Tutorial](https://shellcreeper.com/wp-page-builder-from-scratch-4-front-end-output-theme-dependency-saving-data-to-content/)
 
 peace,<br/>
 David.

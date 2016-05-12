@@ -7,7 +7,11 @@
  * @author David Chandra Purnama <david@genbumedia.com>
  * @copyright Copyright (c) 2016, Genbu Media
 **/
+#postdivrich{
+	display: none; /* JS toggle will display this */
+}
 #fx-page-builder{
+	display: none; /* JS toggle will display this */
 	margin: 20px 0;
 }
 /* Templates */
