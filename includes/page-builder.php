@@ -66,6 +66,7 @@ function fx_pbbase_editor_callback( $post ){
 
 				<div class="fxpb-row-fields">
 					<textarea class="fxpb-row-input" name="" data-field="content" placeholder="Add HTML here..."></textarea>
+					<p><a href="#" class="fxpb-edit">Edit in Editor</a></p>
 					<input class="fxpb-row-input" type="hidden" name="" data-field="type" value="col-1">
 				</div><!-- .fxpb-row-fields -->
 
@@ -84,9 +85,11 @@ function fx_pbbase_editor_callback( $post ){
 				<div class="fxpb-row-fields">
 					<div class="fxpb-col-2-left">
 						<textarea class="fxpb-row-input" name="" data-field="content-1" placeholder="1st column content here..."></textarea>
+						<p><a href="#" class="fxpb-edit">Edit in Editor</a></p>
 					</div><!-- .fxpb-col-2-left -->
 					<div class="fxpb-col-2-right">
 						<textarea class="fxpb-row-input" name="" data-field="content-2" placeholder="2nd column content here..."></textarea>
+						<p><a href="#" class="fxpb-edit">Edit in Editor</a></p>
 					</div><!-- .fxpb-col-2-right -->
 					<input class="fxpb-row-input" type="hidden" name="" data-field="type" value="col-2">
 				</div><!-- .fxpb-row-fields -->
@@ -98,6 +101,27 @@ function fx_pbbase_editor_callback( $post ){
 		<?php wp_nonce_field( "fxpb_nonce_action", "fxpb_nonce" ) ?>
 
 	</div><!-- .fx-page-builder -->
+
+
+	<div id="fxpbed-overlay" style="display: none;"></div>
+	<div id="fxpbed-wrap">
+
+		<div class="fxpbed-actions">
+			<a href="#" class="fxpbed-insert">Done Editing</a>
+		</div><!-- .fxpb-editor-actions -->
+
+		<?php
+			wp_editor( '', 'fxpb_editor', array(
+				'tinymce'       => array(
+					'wp_autoresize_on' => false,
+					'resize'           => false,
+				),
+				'editor_height' => 300,
+			) );
+		?>
+
+	</div><!-- .fxpbed-wrap -->
+
 <?php
 }
 
@@ -255,6 +279,7 @@ function fxpb_render_rows( $post ){
 
 				<div class="fxpb-row-fields">
 					<textarea class="fxpb-row-input" name="fxpb[<?php echo $order; ?>][content]" data-field="content" placeholder="Add HTML here..."><?php echo esc_textarea( $row_data['content'] ); ?></textarea>
+					<p><a href="#" class="fxpb-edit">Edit in Editor</a></p>
 					<input class="fxpb-row-input" type="hidden" name="fxpb[<?php echo $order; ?>][type]" data-field="type" value="col-1">
 				</div><!-- .fxpb-row-fields -->
 
@@ -276,9 +301,11 @@ function fxpb_render_rows( $post ){
 				<div class="fxpb-row-fields">
 					<div class="fxpb-col-2-left">
 						<textarea class="fxpb-row-input" name="fxpb[<?php echo $order; ?>][content-1]" data-field="content-1" placeholder="1st column content here..."><?php echo esc_textarea( $row_data['content-1'] ); ?></textarea>
+						<p><a href="#" class="fxpb-edit">Edit in Editor</a></p>
 					</div><!-- .fxpb-col-2-left -->
 					<div class="fxpb-col-2-right">
 						<textarea class="fxpb-row-input" name="fxpb[<?php echo $order; ?>][content-2]" data-field="content-2" placeholder="2nd column content here..."><?php echo esc_textarea( $row_data['content-2'] ); ?></textarea>
+						<p><a href="#" class="fxpb-edit">Edit in Editor</a></p>
 					</div><!-- .fxpb-col-2-right -->
 					<input class="fxpb-row-input" type="hidden" name="fxpb[<?php echo $order; ?>][type]" data-field="type" value="col-2">
 				</div><!-- .fxpb-row-fields -->

@@ -86,4 +86,62 @@ jQuery( document ).ready( function( $ ){
 		fxPB_UpdateOrder();
 	});
 
+
+
+	/* ================ WP EDITOR ===================== */
+
+	/* Edit Textarea in Editor */
+	$( 'body' ).on( 'click', '.fxpb-edit', function(e){
+		e.preventDefault();
+		var target_textarea = $( this ).parent( 'p' ).siblings( 'textarea' );
+		target_textarea.addClass('fxpb_active');
+
+		tinyMCE.get('fxpb_editor').setContent( target_textarea.val() );
+		$( '#fxpbed-wrap,#fxpbed-overlay' ).show();
+
+	});
+
+	/* Insert Editor to Textarea */
+	$( 'body' ).on( 'click', '.fxpbed-insert', function(e){
+		e.preventDefault();
+
+		tinyMCE.get( "fxpb_editor" ).save();
+		var editor_val = $('#fxpb_editor').val();
+		$( '.fxpb_active' ).val( editor_val ).removeClass( 'fxpb_active' );
+		$( '#fxpbed-wrap,#fxpbed-overlay' ).hide();
+		tinyMCE.get( "fxpb_editor" ).setContent( '' );
+	});
+
+	/* Close without inserting */
+	$( 'body' ).on( 'click', '#fxpbed-overlay', function(e){
+		e.preventDefault();
+		tinyMCE.get( "fxpb_editor" ).setContent( '' );
+		$( '#fxpbed-wrap,#fxpbed-overlay' ).hide();
+	});
+
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
